@@ -35,45 +35,43 @@ if "current_analysis" not in st.session_state:
     st.session_state["current_analysis"] = None
 if "selected_facet_detail" not in st.session_state:
     st.session_state["selected_facet_detail"] = None
-if "theme" not in st.session_state:
-    st.session_state["theme"] = "dark"
+st.session_state["theme"] = "light"
 
-# --- Theme Design System (Dark / Light Mode Tokens) ---
-theme_mode = st.session_state.get("theme", "dark")
-is_dark = theme_mode == "dark"
+# --- Light Mode Theme Design System Tokens ---
+theme_mode = "light"
+is_dark = False
 
-# Dynamic Theme Tokens matching React Enterprise SPA palette
-BG_COLOR = "#0b0d14" if is_dark else "#ffffff"
-SIDEBAR_BG = "#10131d" if is_dark else "#ffffff"
-CARD_BG = "#161a26" if is_dark else "#f8fafc"
-CARD_BORDER = "#222736" if is_dark else "#cbd5e1"
-INPUT_BG = "#10131d" if is_dark else "#ffffff"
-INPUT_BORDER = "#2e3548" if is_dark else "#cbd5e1"
-TEXT_PRIMARY = "#fafafa" if is_dark else "#0f172a"
-TEXT_MUTED = "#94a3b8" if is_dark else "#64748b"
-HEADING_COLOR = "#fafafa" if is_dark else "#0f172a"
-CODE_BG = "#1e2433" if is_dark else "#e2e8f0"
-CODE_TEXT = "#38bdf8" if is_dark else "#1d4ed8"
+BG_COLOR = "#ffffff"
+SIDEBAR_BG = "#f8fafc"
+CARD_BG = "#f8fafc"
+CARD_BORDER = "#e2e8f0"
+INPUT_BG = "#ffffff"
+INPUT_BORDER = "#cbd5e1"
+TEXT_PRIMARY = "#0f172a"
+TEXT_MUTED = "#64748b"
+HEADING_COLOR = "#0f172a"
+CODE_BG = "#f1f5f9"
+CODE_TEXT = "#1d4ed8"
 
-BTN_SEC_BG = "#1c2230" if is_dark else "#f1f5f9"
-BTN_SEC_TEXT = "#fafafa" if is_dark else "#0f172a"
-BTN_SEC_BORDER = "#2e3548" if is_dark else "#cbd5e1"
+BTN_SEC_BG = "#f1f5f9"
+BTN_SEC_TEXT = "#0f172a"
+BTN_SEC_BORDER = "#cbd5e1"
 
-ACCENT_BLUE = "#3b82f6" if is_dark else "#2563eb"
-ACCENT_BG = "rgba(59, 130, 246, 0.14)" if is_dark else "#eff6ff"
-QUOTE_BG = "rgba(59, 130, 246, 0.08)" if is_dark else "#f1f5f9"
+ACCENT_BLUE = "#2563eb"
+ACCENT_BG = "#eff6ff"
+QUOTE_BG = "#f8fafc"
 
-SCORED_COLOR = "#4ade80" if is_dark else "#15803d"
-SCORED_BG = "rgba(34, 197, 94, 0.12)" if is_dark else "#f0fdf4"
-SCORED_BORDER = "rgba(34, 197, 94, 0.3)" if is_dark else "#bbf7d0"
+SCORED_COLOR = "#15803d"
+SCORED_BG = "#f0fdf4"
+SCORED_BORDER = "#bbf7d0"
 
-ABSTAIN_COLOR = "#fbbf24" if is_dark else "#b45309"
-ABSTAIN_BG = "rgba(245, 158, 11, 0.12)" if is_dark else "#fffbeb"
-ABSTAIN_BORDER = "rgba(245, 158, 11, 0.3)" if is_dark else "#fef3c7"
+ABSTAIN_COLOR = "#b45309"
+ABSTAIN_BG = "#fffbeb"
+ABSTAIN_BORDER = "#fef3c7"
 
-UNOBS_COLOR = "#94a3b8" if is_dark else "#64748b"
-UNOBS_BG = "rgba(148, 163, 184, 0.12)" if is_dark else "#f1f5f9"
-UNOBS_BORDER = "rgba(148, 163, 184, 0.3)" if is_dark else "#e2e8f0"
+UNOBS_COLOR = "#64748b"
+UNOBS_BG = "#f1f5f9"
+UNOBS_BORDER = "#e2e8f0"
 
 CUSTOM_CSS = f"""
 <style>
@@ -420,15 +418,8 @@ with col_hdr_left:
     """, unsafe_allow_html=True)
 
 with col_hdr_right:
-    col_t1, col_t2 = st.columns([1, 1])
-    with col_t1:
-        toggle_text = "Light" if is_dark else "Dark"
-        if st.button(toggle_text, key="top_right_theme_toggle_btn"):
-            st.session_state["theme"] = "light" if is_dark else "dark"
-            st.rerun()
-    with col_t2:
-        if st.button("Deploy ↗", key="top_right_deploy_btn"):
-            st.success("Live Streamlit Cloud Application: https://facetiq-ai-hdclwo3bmpzwddbd3ptjrz.streamlit.app/")
+    if st.button("Deploy ↗", key="top_right_deploy_btn"):
+        st.success("Live Streamlit Cloud Application: https://facetiq-ai-hdclwo3bmpzwddbd3ptjrz.streamlit.app/")
 
 st.markdown("<hr style='margin: 8px 0 16px 0; opacity: 0.2;'>", unsafe_allow_html=True)
 

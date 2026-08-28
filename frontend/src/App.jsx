@@ -9,7 +9,7 @@ import HistoryView from './components/HistoryView';
 import SettingsView from './components/SettingsView';
 
 export default function App() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
   const [activeTab, setActiveTab] = useState('analyze');
   const [currentAnalysis, setCurrentAnalysis] = useState(null);
   const [history, setHistory] = useState([]);
