@@ -2,7 +2,7 @@ services:
   - type: web
     name: facetiq-api
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -r requirements-api.txt
     startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: MODEL_NAME
