@@ -24,7 +24,7 @@ Conversation Text Input
 [ Validation & Repair Engine ] ──► Schema Enforcer (JSON Payload Repair & Fallback)
          │
          ▼
-[ Dual UI Surfaces ] ──► React SPA (Vite + FastAPI) & Streamlit Dashboard
+[ Streamlit UI ] ──► FacetIQ Enterprise Application (https://facetiq-ai-hdclwo3bmpzwddbd3ptjrz.streamlit.app/)
 ```
 
 ---
