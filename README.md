@@ -51,19 +51,36 @@ cp .env.example .env
 # Edit .env with your LLM API keys (GROQ_API_KEY, GEMINI_API_KEY, MISTRAL_API_KEY)
 ```
 
-### 2. Launch FastAPI Backend
+### 2. Launch Streamlit Application (Local)
 ```bash
-python -m uvicorn server:app --reload --port 8000
+streamlit run app.py
 ```
-*FastAPI REST API runs on `http://localhost:8000`.*
+*Streamlit UI runs locally on `http://localhost:8501`.*
 
-### 3. Launch React Frontend
-```bash
-cd frontend
-npm install
-npm run dev
+### 3. Deploy to Streamlit Community Cloud
+1. Push repository to GitHub: `https://github.com/Seshaank-2903/facetiq-ai`
+2. Go to **[share.streamlit.io/deploy](https://share.streamlit.io/deploy)**
+3. Configure App:
+   - **Repository**: `Seshaank-2903/facetiq-ai`
+   - **Branch**: `main`
+   - **Main file path**: `app.py`
+4. In **Advanced Settings → Secrets**, add:
+```toml
+API_KEY = "your_mistral_api_key_here"
+MODEL_NAME = "mistral-small-latest"
+MODEL_PROVIDER = "mistral"
+API_BASE_URL = "https://api.mistral.ai/v1"
 ```
-*React SPA UI runs on `http://localhost:5173`.*
+5. Click **Deploy**.
+
+### 4. Launch FastAPI & React Frontend (Optional)
+```bash
+# Launch FastAPI backend
+python -m uvicorn server:app --reload --port 8000
+
+# Launch React frontend
+cd frontend && npm install && npm run dev
+```
 
 ### 4. Running CLI & Unit Tests
 ```bash
