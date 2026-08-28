@@ -1,14 +1,17 @@
-fastapi>=0.100.0
-uvicorn>=0.22.0
-gunicorn>=21.2.0
-a2wsgi>=1.10.0
-python-multipart>=0.0.6
-pandas>=2.0.0
-numpy>=1.24.0
-pydantic>=2.5.0
+# FacetIQ — Streamlit Cloud deployment requirements
+# Core AI/ML
 sentence-transformers>=2.2.2
 faiss-cpu>=1.7.4
-python-dotenv>=1.0.0
-pytest>=7.4.0
-requests>=2.31.0
+numpy>=1.24.0
+pandas>=2.0.0
+pydantic>=2.5.0
+
+# Streamlit UI
 streamlit>=1.28.0
+
+# HTTP / API
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Testing
+pytest>=7.4.0
