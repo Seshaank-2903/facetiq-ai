@@ -10,7 +10,9 @@ from typing import List, Dict, Any, Optional
 import numpy as np
 import pandas as pd
 
+# pyrefly: ignore [missing-import]
 from src.config import settings
+# pyrefly: ignore [missing-import]
 from src.embeddings import encode_texts
 
 try:

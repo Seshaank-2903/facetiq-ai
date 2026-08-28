@@ -8,6 +8,7 @@ import hashlib
 from typing import List, Union
 import numpy as np
 
+# pyrefly: ignore [missing-import]
 from src.config import settings
 
 _model_instance = None

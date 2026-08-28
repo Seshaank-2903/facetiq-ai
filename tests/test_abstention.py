@@ -1,5 +1,6 @@
 """Unit tests for safety, abstention, and hallucination traps."""
 
+# pyrefly: ignore [missing-import]
 from src.abstention import check_observability_and_safety
 
 def test_medical_lab_value_trap():

@@ -10,9 +10,13 @@ import re
 import pandas as pd
 import streamlit as st
 
+# pyrefly: ignore [missing-import]
 from src.pipeline import FacetScoringPipeline
+# pyrefly: ignore [missing-import]
 from src.retrieval import FacetRetriever
+# pyrefly: ignore [missing-import]
 from src.evaluate import run_benchmark_evaluation
+# pyrefly: ignore [missing-import]
 from src.config import settings
 
 # --- Page Configuration ---

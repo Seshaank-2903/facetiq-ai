@@ -1,5 +1,6 @@
 """Unit tests for JSON output validation and repair module."""
 
+# pyrefly: ignore [missing-import]
 from src.validation import extract_json_payload, validate_and_repair_facet_result, parse_and_validate_batch_output
 
 def test_extract_json_payload():

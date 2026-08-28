@@ -1,7 +1,9 @@
 """Unit tests for vector retrieval and embedding modules."""
 
 import pandas as pd
+# pyrefly: ignore [missing-import]
 from src.retrieval import FacetRetriever
+# pyrefly: ignore [missing-import]
 from src.embeddings import encode_texts
 
 

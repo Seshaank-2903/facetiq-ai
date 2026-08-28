@@ -1,7 +1,9 @@
 """Unit tests for facet preprocessing module."""
 
 import os
+# pyrefly: ignore [missing-import]
 from src.preprocessing import normalize_facet, is_header_or_noise, preprocess_facets
+# pyrefly: ignore [missing-import]
 from src.taxonomy import classify_facet
 
 def test_normalize_facet():

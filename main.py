@@ -11,7 +11,9 @@ import os
 import json
 import argparse
 
+# pyrefly: ignore [missing-import]
 from src.pipeline import FacetScoringPipeline
+# pyrefly: ignore [missing-import]
 from src.evaluate import run_benchmark_evaluation
 
 
