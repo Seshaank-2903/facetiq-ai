@@ -38,6 +38,7 @@ class FacetRetriever:
         if os.path.exists(self.processed_path) and not (force_rebuild and self.processed_path == settings.PROCESSED_DATA_PATH):
             self.df_facets = pd.read_csv(self.processed_path)
         else:
+            # pyrefly: ignore [missing-import]
             from src.preprocessing import preprocess_facets
             self.df_facets = preprocess_facets(output_path=self.processed_path)
 
