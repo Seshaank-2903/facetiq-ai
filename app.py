@@ -18,6 +18,7 @@ from src.retrieval import FacetRetriever
 from src.evaluate import run_benchmark_evaluation
 # pyrefly: ignore [missing-import]
 from src.config import settings
+# pyrefly: ignore [missing-import]
 from server import app as app
 
 # --- Page Configuration ---
