@@ -1,5 +1,7 @@
 # FacetIQ — AI Conversation Facet Evaluation Platform
 
+🌐 **Live Streamlit Application:** [https://facetiq-ai-hdclwo3bmpzwddbd3ptjrz.streamlit.app/](https://facetiq-ai-hdclwo3bmpzwddbd3ptjrz.streamlit.app/)
+
 FacetIQ is an enterprise-grade AI conversation intelligence system designed for evaluating conversational text against defined competency and behavioral facets. The system incorporates vector semantic retrieval, observability & safety abstention logic, batched LLM scoring, and rigorous output JSON schema validation.
 
 ---

@@ -428,7 +428,7 @@ with col_hdr_right:
             st.rerun()
     with col_t2:
         if st.button("Deploy ↗", key="top_right_deploy_btn"):
-            st.success("FacetIQ Enterprise is active and running on Streamlit Cloud.")
+            st.success("Live Streamlit Cloud Application: https://facetiq-ai-hdclwo3bmpzwddbd3ptjrz.streamlit.app/")
 
 st.markdown("<hr style='margin: 8px 0 16px 0; opacity: 0.2;'>", unsafe_allow_html=True)
 
