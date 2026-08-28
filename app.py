@@ -42,26 +42,26 @@ if "theme" not in st.session_state:
 theme_mode = st.session_state.get("theme", "dark")
 is_dark = theme_mode == "dark"
 
-# Dynamic Theme Tokens
-BG_COLOR = "#09090b" if is_dark else "#ffffff"
-SIDEBAR_BG = "#121215" if is_dark else "#ffffff"
-CARD_BG = "#18181c" if is_dark else "#f8fafc"
-CARD_BORDER = "#27272a" if is_dark else "#cbd5e1"
-INPUT_BG = "#18181c" if is_dark else "#ffffff"
-INPUT_BORDER = "#3f3f46" if is_dark else "#cbd5e1"
+# Dynamic Theme Tokens matching React Enterprise SPA palette
+BG_COLOR = "#0b0d14" if is_dark else "#ffffff"
+SIDEBAR_BG = "#10131d" if is_dark else "#ffffff"
+CARD_BG = "#161a26" if is_dark else "#f8fafc"
+CARD_BORDER = "#222736" if is_dark else "#cbd5e1"
+INPUT_BG = "#10131d" if is_dark else "#ffffff"
+INPUT_BORDER = "#2e3548" if is_dark else "#cbd5e1"
 TEXT_PRIMARY = "#fafafa" if is_dark else "#0f172a"
-TEXT_MUTED = "#a1a1aa" if is_dark else "#475569"
+TEXT_MUTED = "#94a3b8" if is_dark else "#64748b"
 HEADING_COLOR = "#fafafa" if is_dark else "#0f172a"
-CODE_BG = "#27272a" if is_dark else "#e2e8f0"
+CODE_BG = "#1e2433" if is_dark else "#e2e8f0"
 CODE_TEXT = "#38bdf8" if is_dark else "#1d4ed8"
 
-BTN_SEC_BG = "#27272a" if is_dark else "#f1f5f9"
+BTN_SEC_BG = "#1c2230" if is_dark else "#f1f5f9"
 BTN_SEC_TEXT = "#fafafa" if is_dark else "#0f172a"
-BTN_SEC_BORDER = "#3f3f46" if is_dark else "#cbd5e1"
+BTN_SEC_BORDER = "#2e3548" if is_dark else "#cbd5e1"
 
 ACCENT_BLUE = "#3b82f6" if is_dark else "#2563eb"
-ACCENT_BG = "rgba(59, 130, 246, 0.12)" if is_dark else "#eff6ff"
-QUOTE_BG = "rgba(59, 130, 246, 0.06)" if is_dark else "#f1f5f9"
+ACCENT_BG = "rgba(59, 130, 246, 0.14)" if is_dark else "#eff6ff"
+QUOTE_BG = "rgba(59, 130, 246, 0.08)" if is_dark else "#f1f5f9"
 
 SCORED_COLOR = "#4ade80" if is_dark else "#15803d"
 SCORED_BG = "rgba(34, 197, 94, 0.12)" if is_dark else "#f0fdf4"
