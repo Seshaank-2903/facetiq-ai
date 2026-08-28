@@ -408,7 +408,7 @@ with col_hdr_left:
     st.markdown(f"""
     <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 2px;">
         <h2 style="margin: 0; font-size: 1.4rem; font-weight: 800; color: {TEXT_PRIMARY};">FacetIQ</h2>
-        <span style="font-size: 0.7rem; font-weight: 600; padding: 2px 6px; border-radius: 4px; background: {ACCENT_BG}; color: {ACCENT_BLUE}; border: 1px solid {CARD_BORDER};">ENTERPRISE</span>
+        <span style="font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 12px; background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3);">● System Active</span>
     </div>
     <p style="font-size: 0.82rem; color: {TEXT_MUTED}; margin: 0;">AI Conversation Intelligence & Facet Evaluation Platform</p>
     """, unsafe_allow_html=True)
@@ -441,7 +441,6 @@ with st.sidebar:
     navigation = st.radio(
         "Navigation",
         options=[
-            "⚡ React Web App (facetiq-ai.vercel.app)",
             "Analyze Conversation",
             "Facet Catalog",
             "Safety & Abstention",
@@ -461,16 +460,10 @@ with st.sidebar:
     st.markdown(f"**Embeddings**: `{settings.EMBEDDING_MODEL}`")
 
 
-if navigation == "⚡ React Web App (facetiq-ai.vercel.app)":
-    st.markdown("### ⚡ FacetIQ Enterprise Web Interface")
-    st.markdown("<p class='tooltip-text'>Live React SPA Frontend (`facetiq-ai.vercel.app`) embedded inside Streamlit workspace.</p>", unsafe_allow_html=True)
-    import streamlit.components.v1 as components
-    components.iframe("https://facetiq-ai.vercel.app", height=900, scrolling=True)
-
 # ==============================================================================
 # PAGE 1: ANALYZE CONVERSATION (PRIMARY DEFAULT LANDING PAGE)
 # ==============================================================================
-elif navigation == "Analyze Conversation":
+if navigation == "Analyze Conversation":
     st.markdown("### Conversation Analysis")
     st.markdown("<p class='tooltip-text'>Evaluate conversational evidence against relevant facets.</p>", unsafe_allow_html=True)
     
