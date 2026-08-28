@@ -401,25 +401,34 @@ def highlight_evidence_in_text(text: str, snippet: str) -> str:
     return re.sub(f"({pattern})", r"<mark style='background: rgba(59, 130, 246, 0.3); color: inherit; padding: 2px 4px; border-radius: 4px;'>\1</mark>", text, flags=re.IGNORECASE)
 
 
-# --- TOP HEADER BAR WITH COMPACT DEPLOY-SIZED THEME TOGGLE BUTTON ---
-col_hdr_left, col_hdr_right = st.columns([5, 1])
+# --- TOP HEADER BAR MATCHING REACT HEADER ---
+col_hdr_left, col_hdr_right = st.columns([4, 1.5])
 
 with col_hdr_left:
     st.markdown(f"""
-    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 2px;">
-        <h2 style="margin: 0; font-size: 1.4rem; font-weight: 800; color: {TEXT_PRIMARY};">FacetIQ</h2>
-        <span style="font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 12px; background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3);">● System Active</span>
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 2px;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <h2 style="margin: 0; font-size: 1.35rem; font-weight: 800; color: {TEXT_PRIMARY};">FacetIQ</h2>
+            <span style="font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 4px; background: {ACCENT_BG}; color: {ACCENT_BLUE}; border: 1px solid {CARD_BORDER};">ENTERPRISE</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: {TEXT_MUTED}; background: {CARD_BG}; padding: 2px 8px; border-radius: 4px; border: 1px solid {CARD_BORDER};">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background-color: #22c55e; display: inline-block;"></span>
+            API Connected
+        </div>
     </div>
     <p style="font-size: 0.82rem; color: {TEXT_MUTED}; margin: 0;">AI Conversation Intelligence & Facet Evaluation Platform</p>
     """, unsafe_allow_html=True)
 
 with col_hdr_right:
-    st.markdown("<div class='deploy-style-theme-btn'>", unsafe_allow_html=True)
-    toggle_text = "Light" if is_dark else "Dark"
-    if st.button(toggle_text, key="top_right_theme_toggle_btn"):
-        st.session_state["theme"] = "light" if is_dark else "dark"
-        st.rerun()
-    st.markdown("</div>", unsafe_allow_html=True)
+    col_t1, col_t2 = st.columns([1, 1])
+    with col_t1:
+        toggle_text = "Light" if is_dark else "Dark"
+        if st.button(toggle_text, key="top_right_theme_toggle_btn"):
+            st.session_state["theme"] = "light" if is_dark else "dark"
+            st.rerun()
+    with col_t2:
+        if st.button("Deploy ↗", key="top_right_deploy_btn"):
+            st.success("FacetIQ Enterprise is active and running on Streamlit Cloud.")
 
 st.markdown("<hr style='margin: 8px 0 16px 0; opacity: 0.2;'>", unsafe_allow_html=True)
 
