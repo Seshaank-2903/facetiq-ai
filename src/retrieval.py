@@ -6,6 +6,7 @@ candidate facets relevant to conversation text.
 
 import os
 from typing import List, Dict, Any, Optional
+# pyrefly: ignore [missing-import]
 import numpy as np
 import pandas as pd
 
@@ -32,7 +33,7 @@ class FacetRetriever:
         if not force_rebuild and self.df_facets is not None and self.embeddings is not None:
             return
 
-        if os.path.exists(self.processed_path):
+        if os.path.exists(self.processed_path) and not (force_rebuild and self.processed_path == settings.PROCESSED_DATA_PATH):
             self.df_facets = pd.read_csv(self.processed_path)
         else:
             from src.preprocessing import preprocess_facets

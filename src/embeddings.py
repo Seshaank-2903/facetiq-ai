@@ -44,7 +44,7 @@ def encode_texts(texts: Union[List[str], str]) -> np.ndarray:
     elif not texts:
         return np.empty((0, 384), dtype=np.float32)
 
-    clean_texts = [str(t) if t is not None else "" for t in texts]
+    clean_texts = [t if isinstance(t, str) else str(t or "") for t in texts]
 
     model = get_embedding_model()
     

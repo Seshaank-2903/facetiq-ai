@@ -4,7 +4,7 @@ End-to-end orchestration: Retrieval -> Observability/Safety Filtering ->
 Batched LLM Scoring -> Output Validation & Formatting.
 """
 
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 import math
 
 from src.config import settings
@@ -15,15 +15,15 @@ from src.schemas import FacetScoreResult
 
 
 class FacetScoringPipeline:
-    def __init__(self, retriever: FacetRetriever = None):
+    def __init__(self, retriever: Optional[FacetRetriever] = None):
         self.retriever = retriever or FacetRetriever()
         self.retriever.build_or_load_index()
 
     def process_conversation(
         self,
         conversation_text: str,
-        top_k: int = None,
-        batch_size: int = None
+        top_k: Optional[int] = None,
+        batch_size: Optional[int] = None
     ) -> Dict[str, Any]:
         """Runs the complete pipeline for a single conversation snippet.
 

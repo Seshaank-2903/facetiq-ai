@@ -1,11 +1,12 @@
 import os
 from dataclasses import dataclass
+from typing import Optional
 from dotenv import load_dotenv
 
 load_dotenv()
 
-def _clean(val: str, default: str = "") -> str:
-    if not val:
+def _clean(val: Optional[str], default: str = "") -> str:
+    if val is None or not val:
         return default
     return val.split("#")[0].strip()
 
