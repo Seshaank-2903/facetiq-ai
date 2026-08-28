@@ -4,7 +4,6 @@ project-roots = [
 ]
 search-paths = [
     ".",
-    "src",
     ".venv/Lib/site-packages"
 ]
 python-interpreter = ".venv/Scripts/python.exe"
@@ -15,6 +14,5 @@ venvPath = "."
 venv = ".venv"
 extraPaths = [
     ".",
-    "src",
     ".venv/Lib/site-packages"
 ]

@@ -5,7 +5,7 @@ unsupported LLM inferences on medical diagnoses, third-person facts, or missing 
 """
 
 import re
-from typing import Dict, Any, Tuple
+from typing import Dict, Any, Tuple, Optional, Literal
 
 # Patterns that indicate an explicit physical measurement or diagnostic quote in text
 NUMERICAL_MEASUREMENT_PATTERNS = [
@@ -27,7 +27,7 @@ THIRD_PERSON_PATTERNS = [
 def check_observability_and_safety(
     facet_record: Dict[str, Any],
     conversation_text: str
-) -> Tuple[bool, str, str]:
+) -> Tuple[bool, Literal["scored", "insufficient_evidence", "not_observable"], str]:
     """Evaluates whether a candidate facet can be safely passed to LLM scoring
     or must be immediately abstained.
 

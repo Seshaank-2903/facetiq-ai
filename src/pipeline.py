@@ -7,20 +7,11 @@ Batched LLM Scoring -> Output Validation & Formatting.
 from typing import Dict, Any, Optional
 import math
 
-try:
-    from .config import settings
-    from .retrieval import FacetRetriever
-    from .abstention import check_observability_and_safety
-    from .scoring import score_facet_batch
-    from .schemas import FacetScoreResult
-except ImportError:
-    # pyrefly: ignore [missing-import]
-    from src.config import settings
-    # pyrefly: ignore [missing-import]
-    from src.retrieval import FacetRetriever
-    from src.abstention import check_observability_and_safety
-    from src.scoring import score_facet_batch
-    from src.schemas import FacetScoreResult
+from src.config import settings
+from src.retrieval import FacetRetriever
+from src.abstention import check_observability_and_safety
+from src.scoring import score_facet_batch
+from src.schemas import FacetScoreResult
 
 
 class FacetScoringPipeline:
