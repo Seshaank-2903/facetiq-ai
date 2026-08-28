@@ -4,6 +4,7 @@ Uses SentenceTransformers (BAAI/bge-small-en-v1.5 or all-MiniLM-L6-v2) for dense
 with a deterministic fallback encoder for offline/constrained environments.
 """
 
+import os
 import hashlib
 from typing import List, Union
 import numpy as np
@@ -18,6 +19,11 @@ def get_embedding_model():
     """Lazy loader for SentenceTransformer model with fallback."""
     global _model_instance
     if _model_instance is not None:
+        return _model_instance
+
+    if os.getenv("LOW_MEMORY_MODE", "false").lower() in ["true", "1"]:
+        print("[Embeddings] LOW_MEMORY_MODE enabled for 512MB RAM environment. Using Hash Vectorizer.")
+        _model_instance = "fallback"
         return _model_instance
 
     try:
