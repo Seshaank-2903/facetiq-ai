@@ -78,7 +78,7 @@ class FacetRetriever:
         k = top_k or settings.TOP_K_RETRIEVAL
         k = max(1, min(k, len(self.df_facets)))
 
-        conv_str = str(conversation_text or "")
+        conv_str = conversation_text if isinstance(conversation_text, str) else str(conversation_text or "")
         query_vec = encode_texts([conv_str])
 
         if HAS_FAISS and self.faiss_index is not None:

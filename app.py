@@ -11,6 +11,7 @@ import pandas as pd
 import streamlit as st
 
 from src.pipeline import FacetScoringPipeline
+from src.retrieval import FacetRetriever
 from src.evaluate import run_benchmark_evaluation
 from src.config import settings
 
@@ -724,7 +725,6 @@ elif navigation == "Facet Catalog":
     st.markdown("<p class='tooltip-text'>Browse and understand the available evaluation facets.</p>", unsafe_allow_html=True)
 
     try:
-        from src.retrieval import FacetRetriever
         retriever = FacetRetriever()
         retriever.build_or_load_index()
         df_catalog = retriever.df_facets
