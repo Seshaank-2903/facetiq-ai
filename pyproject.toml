@@ -1,0 +1,17 @@
+[tool.pyrefly]
+search-paths = [
+    ".venv/Lib/site-packages",
+    ".venv/lib/site-packages",
+    "src",
+    "."
+]
+python-interpreter = ".venv/Scripts/python.exe"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+extraPaths = [
+    ".",
+    "src",
+    ".venv/Lib/site-packages"
+]
