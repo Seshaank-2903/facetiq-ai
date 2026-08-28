@@ -441,6 +441,7 @@ with st.sidebar:
     navigation = st.radio(
         "Navigation",
         options=[
+            "⚡ React Web App (facetiq-ai.vercel.app)",
             "Analyze Conversation",
             "Facet Catalog",
             "Safety & Abstention",
@@ -460,10 +461,16 @@ with st.sidebar:
     st.markdown(f"**Embeddings**: `{settings.EMBEDDING_MODEL}`")
 
 
+if navigation == "⚡ React Web App (facetiq-ai.vercel.app)":
+    st.markdown("### ⚡ FacetIQ Enterprise Web Interface")
+    st.markdown("<p class='tooltip-text'>Live React SPA Frontend (`facetiq-ai.vercel.app`) embedded inside Streamlit workspace.</p>", unsafe_allow_html=True)
+    import streamlit.components.v1 as components
+    components.iframe("https://facetiq-ai.vercel.app", height=900, scrolling=True)
+
 # ==============================================================================
 # PAGE 1: ANALYZE CONVERSATION (PRIMARY DEFAULT LANDING PAGE)
 # ==============================================================================
-if navigation == "Analyze Conversation":
+elif navigation == "Analyze Conversation":
     st.markdown("### Conversation Analysis")
     st.markdown("<p class='tooltip-text'>Evaluate conversational evidence against relevant facets.</p>", unsafe_allow_html=True)
     
