@@ -1,0 +1,52 @@
+[
+  {
+    "id": "conv_01_clear_evidence",
+    "category": "clear_evidence",
+    "text": "I gave a presentation yesterday to the executive board and answered all questions calmly and confidently."
+  },
+  {
+    "id": "conv_02_ambiguous_evidence",
+    "category": "ambiguous_evidence",
+    "text": "I guess the client meeting went alright. I presented the slides, but I am not sure if everyone followed."
+  },
+  {
+    "id": "conv_03_contradictory_evidence",
+    "category": "contradictory_evidence",
+    "text": "I am extremely confident when speaking in public. Actually, I panic every time I stand in front of an audience."
+  },
+  {
+    "id": "conv_04_quoted_speech",
+    "category": "quoted_speech",
+    "text": "During my 1-on-1, my manager said, 'You're terrible at presentations and need serious help.'"
+  },
+  {
+    "id": "conv_05_sarcasm",
+    "category": "sarcasm",
+    "text": "Yeah, I absolutely LOVE presenting to 500 people on zero sleep. It is my favorite thing in the world."
+  },
+  {
+    "id": "conv_06_code_switching",
+    "category": "code_switching",
+    "text": "Presentation start hone ke baad I became completely comfortable and handled the Q&A smoothly."
+  },
+  {
+    "id": "conv_07_low_evidence",
+    "category": "low_evidence",
+    "text": "The weather was cloudy yesterday afternoon, so I decided to make some tea."
+  },
+  {
+    "id": "conv_08_medical_trap",
+    "category": "medical_trap",
+    "text": "I've been feeling lightheaded and dizzy whenever I stand up quickly."
+  },
+  {
+    "id": "conv_09_third_person_trap",
+    "category": "third_person_trap",
+    "text": "My father has diabetes diagnosis and high blood pressure, and my friend earns 150k salary."
+  },
+  {
+    "id": "conv_10_strong_leadership",
+    "category": "strong_leadership",
+    "text": "I stepped up when our tech lead left, delegated tasks across 5 engineers, and delivered the release on schedule."
+  }
+]

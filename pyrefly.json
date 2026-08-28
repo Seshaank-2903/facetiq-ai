@@ -1,0 +1,8 @@
+{
+  "pythonPath": ".venv/Scripts/python.exe",
+  "searchPaths": [
+    ".",
+    "src",
+    ".venv/Lib/site-packages"
+  ]
+}

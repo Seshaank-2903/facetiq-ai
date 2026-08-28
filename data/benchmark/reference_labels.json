@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "annotator": "Human Expert Reviewer (AI/ML Engineer)",
+    "reviewed_date": "2026-08-27",
+    "description": "Ground truth human-reviewed reference labels for evaluating facet scoring baseline."
+  },
+  "labels": [
+    {
+      "conversation_id": "conv_01_clear_evidence",
+      "facet": "confidence",
+      "expected_status": "scored",
+      "expected_score": 5,
+      "notes": "Explicit evidence: 'answered all questions calmly and confidently'."
+    },
+    {
+      "conversation_id": "conv_01_clear_evidence",
+      "facet": "presentation skill",
+      "expected_status": "scored",
+      "expected_score": 4,
+      "notes": "Direct evidence of delivering presentation and answering Q&A."
+    },
+    {
+      "conversation_id": "conv_02_ambiguous_evidence",
+      "facet": "confidence",
+      "expected_status": "scored",
+      "expected_score": 2,
+      "notes": "Speaker expresses uncertainty: 'went alright', 'not sure if everyone followed'."
+    },
+    {
+      "conversation_id": "conv_03_contradictory_evidence",
+      "facet": "confidence",
+      "expected_status": "scored",
+      "expected_score": 3,
+      "notes": "Contradictory statements ('extremely confident' vs 'panic every time'). Score 3 reflects conflict."
+    },
+    {
+      "conversation_id": "conv_04_quoted_speech",
+      "facet": "presentation skill",
+      "expected_status": "insufficient_evidence",
+      "expected_score": null,
+      "notes": "Quoted statement from manager is third-party feedback, not verified speaker behavior."
+    },
+    {
+      "conversation_id": "conv_05_sarcasm",
+      "facet": "presentation skill",
+      "expected_status": "scored",
+      "expected_score": 1,
+      "notes": "Sarcastic statement ('absolutely LOVE presenting... on zero sleep') indicates very weak/negative comfort."
+    },
+    {
+      "conversation_id": "conv_06_code_switching",
+      "facet": "code-switching fluency",
+      "expected_status": "scored",
+      "expected_score": 4,
+      "notes": "Natural code-switching between Hindi and English ('Presentation start hone ke baad')."
+    },
+    {
+      "conversation_id": "conv_07_low_evidence",
+      "facet": "confidence",
+      "expected_status": "insufficient_evidence",
+      "expected_score": null,
+      "notes": "Statement about cloudy weather provides zero conversational evidence regarding confidence."
+    },
+    {
+      "conversation_id": "conv_08_medical_trap",
+      "facet": "blood pressure",
+      "expected_status": "not_observable",
+      "expected_score": null,
+      "notes": "Medical inference trap: Dizziness is a symptom, not a quantitative blood pressure measurement."
+    },
+    {
+      "conversation_id": "conv_08_medical_trap",
+      "facet": "diabetes diagnosis",
+      "expected_status": "not_observable",
+      "expected_score": null,
+      "notes": "Medical diagnosis cannot be inferred from symptoms without clinical testing."
+    },
+    {
+      "conversation_id": "conv_09_third_person_trap",
+      "facet": "diabetes diagnosis",
+      "expected_status": "insufficient_evidence",
+      "expected_score": null,
+      "notes": "Statement concerns father's medical diagnosis, not the speaker."
+    },
+    {
+      "conversation_id": "conv_09_third_person_trap",
+      "facet": "friend's salary",
+      "expected_status": "insufficient_evidence",
+      "expected_score": null,
+      "notes": "Third-person financial disclosure."
+    },
+    {
+      "conversation_id": "conv_10_strong_leadership",
+      "facet": "leadership",
+      "expected_status": "scored",
+      "expected_score": 5,
+      "notes": "Strong direct evidence: stepped up, delegated across 5 engineers, delivered release on schedule."
+    },
+    {
+      "conversation_id": "conv_10_strong_leadership",
+      "facet": "team management",
+      "expected_status": "scored",
+      "expected_score": 5,
+      "notes": "Strong team management evidence."
+    }
+  ]
+}

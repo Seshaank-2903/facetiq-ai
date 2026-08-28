@@ -1,0 +1,61 @@
+facet_raw,category,notes
+confidence,behavioral,Self-reported or observed confidence in conversational tone.
+ communication skill ,communication,Verbal clarity and articulation (whitespace noise).
+COMMUNICATION SKILL,communication,Duplicate row with uppercase noise.
+leadership,behavioral,Demonstrated or discussed leadership qualities.
+stress,emotional_expression,Expression of stress or pressure.
+technical ability,skill,Demonstration or discussion of technical knowledge.
+blood pressure,medical,Physical blood pressure measurement (mmHg).
+blood pressure,medical,Exact duplicate row for testing deduplication.
+age,biographical,Exact chronological age in years.
+medical conditions,medical,Formal clinical diagnosis or medical condition.
+diabetes diagnosis,medical,Clinical diagnosis of diabetes.
+FACET_NAME,CATEGORY,DESCRIPTION,Header-like entry injected in data body.
+   ,,Blank row with whitespace only.
+presentation skill,communication,Ability to present ideas effectively to an audience.
+problem solving,skill,Analytical thinking and problem-solving approach.
+father's employment status,biographical,Employment status of speaker's parent (third-person).
+friend's salary,financial,Salary details of speaker's acquaintance (third-person).
+bank account balance,financial,Exact financial balance in bank.
+emotional stability,emotional_expression,Emotional regulation and baseline stability.
+empathy,communication,Showing empathy towards others in conversation.
+sarcasm_sensitivity,communication,Use or detection of sarcastic tone.
+code-switching fluency,communication,Switching between languages or dialects in speech.
+cholesterol level,medical,Serum cholesterol lab measurement (mg/dL).
+heart rate,medical,Heart rate in beats per minute (BPM).
+years of experience,biographical,Total professional work experience in years.
+current employer,biographical,Name of current employing company.
+anxiety,emotional_expression,Expressed feelings of anxiety or panic.
+depression diagnosis,medical,Formal clinical diagnosis of major depressive disorder.
+team management,skill,Managing team members and delegating responsibilities.
+conflict resolution,communication,Handling interpersonal or professional disagreement.
+negotiation skill,communication,Effective bargaining and reaching agreements.
+spoken english fluency,communication,Fluency and ease in spoken English.
+hindi language usage,communication,Use of Hindi vocabulary or phrases in speech.
+manager rating,external_fact,Rating given by a manager about speaker's performance.
+credit score,financial,Personal financial credit score (FICO/CIBIL).
+criminal record,sensitive,Legal background or criminal history record.
+political affiliation,sensitive,Personal political alignment or party preference.
+religious background,sensitive,Personal religious belief or community.
+listening skill,communication,Active listening and comprehension during conversation.
+time management,skill,Prioritization and adherence to deadlines.
+adaptability,behavioral,Flexibility in responding to changing circumstances.
+frustration level,emotional_expression,Expression of irritation or frustration.
+enthusiasm,emotional_expression,Expressed excitement or positive energy.
+assertiveness,communication,Direct and firm communication style.
+humor / irony,communication,Use of humor or ironic remarks.
+mother's medical history,medical,Health background of speaker's mother (third-person medical).
+body weight (kg),medical,Physical body weight in kilograms.
+sleep quality,preference,Self-reported sleep quality or insomnia.
+decision making under pressure,skill,Making choices under tight constraints.
+project management proficiency,skill,Overseeing project lifecycles and milestones.
+python programming competence,skill,Demonstrated knowledge of Python syntax and libraries.
+SQL query writing,skill,Ability to write database queries.
+salary expectations,financial,Desired compensation level.
+home address,sensitive,Physical home address details.
+IQ score,external_fact,Formal cognitive test result score.
+GPA,external_fact,Academic Grade Point Average score.
+---,malformed,Formatting noise entry.
+INVALID_ROW_###,malformed,Corrupted entry string.
+work-life balance satisfaction,preference,Perceived balance between work and personal life.
+self-confidence,behavioral,Sense of self-assurance and self-worth.
