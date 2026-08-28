@@ -18,15 +18,7 @@ from src.retrieval import FacetRetriever
 from src.evaluate import run_benchmark_evaluation
 # pyrefly: ignore [missing-import]
 from src.config import settings
-try:
-    # pyrefly: ignore [missing-import]
-    from a2wsgi import ASGIMiddleware
-    # pyrefly: ignore [missing-import]
-    from server import app as _asgi_app
-    app = ASGIMiddleware(_asgi_app)
-except Exception:
-    # pyrefly: ignore [missing-import]
-    from server import app as app
+
 
 # --- Page Configuration ---
 st.set_page_config(
